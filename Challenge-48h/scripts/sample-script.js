@@ -16,10 +16,36 @@ async function main() {
   // We get the contract to deploy
   const Greeter = await hre.ethers.getContractFactory("Greeter");
   const greeter = await Greeter.deploy("Hello, Hardhat!");
-
   await greeter.deployed();
 
+  const YNV = await hre.ethers.getContractFactory("YNVToken");
+  const ynv = await YNV.deploy();
+  await ynv.deployed();
+
+  const LOO = await hre.ethers.getContractFactory("Looney");
+  const loo = await LOO.deploy();
+  await loo.deployed();
+
+  const swap = await hre.ethers.getContractFactory("TokenSwap");
+  const sw = await swap.deploy();
+  await sw.deployed();
+
   console.log("Greeter deployed to:", greeter.address);
+  console.log("YNVToken deployed to:", ynv.address);
+  console.log("Looney deployed to:", loo.address);
+  console.log("TokenSwap deployed to:", sw.address);
+  console.log("Looney deployed to:", sw.name);
+  console.log("YNVToken deployed to:", ynv.name);
+  console.log("YNVToken deployed to:", ynv.symbol);
+  console.log("Looney deployed to:", sw.symbol);
+  //console.log();
+  console.log("-----------------------------------------");
+  //console.log("Swap from:", sw.address);
+  //console.log(await sw.approve('0x70997970c51812dc3a010c7d01b50e0d17dc79c8', 100));
+  // //console.log(" Transfer from:", JSON.stringify(await ynv.transfer('0x70997970c51812dc3a010c7d01b50e0d17dc79c8', 2000), null, 2))
+  // console.log(" the Wallet contains :", (await ynv.name()));
+  console.log(" Balance of :", (await ynv.balanceOf('0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266')).toString());
+
   
 }
 
