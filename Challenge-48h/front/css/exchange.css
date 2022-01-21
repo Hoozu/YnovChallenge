@@ -23,7 +23,6 @@ nav ul {
 	display: flex;
 	align-items: center;
 	font-size: 13px;
-    margin-left: 30px
 }
 
 nav ul li {
@@ -167,6 +166,23 @@ nav ul li a:hover::after {
   background: linear-gradient(45deg, greenyellow, dodgerblue);
 }
 
-
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
 /*# sourceMappingURL=styles.css.map */

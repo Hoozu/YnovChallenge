@@ -119,6 +119,7 @@ nav ul li a:hover::after {
 
 #image-page-2 {
 	margin: 0 auto;
+    padding: 50px;
 }
 
 .logo-page2{
@@ -129,7 +130,7 @@ nav ul li a:hover::after {
 
 footer {
 	background-color: black;
-	height: 5px;
+	height: 60px;
 }
 
 #logo-chat{
@@ -146,20 +147,6 @@ footer {
 	width: 30px;
 	transform: translate(15px,15px);
 }
-
-#searchbar{
-	margin-left: 3%;
-	padding:15px;
-	border-radius: 10px;
-	}
-
-#connecter {
-	margin-left: 59%;
-	padding:15px;
-	border-radius: 10px;
-	background-color: white;
-	}
-
 
 
 /*# sourceMappingURL=styles.css.map */
